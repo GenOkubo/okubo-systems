@@ -1,31 +1,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-  <title>�ŕn��Windows95</title>
+  <title>最貧のWindows95</title>
+  <meta charset="UTF-8">
 </head>
   <body bgcolor="#ffffff">
          
-<h1>�ŕn��Windows95</h1>
+<h1>最貧のWindows95</h1>
      <br>
-     ����PC9801BX2�̓��W�b�N�{�[�h�����́A�o���b�N�Z�b�g�ŁA�x�m�ʂ�FM-R�̃V���V�[�ɂ̂��āA9801BX�p�̓d���œ����Ă���A���i�̃`�F�b�N�p�Ɏ��X�g���܂��BCPU��486SX25MHz�AIDE�R�l�N�^2�A72pinSIMM�X���b�g2�����Ă��܂��BSIMM�X���b�g�̂���1�́A�ő�4MB�܂ł����F���ł��Ȃ��̂ŁA����1�̕���32MB�����t����ƁA36MB�܂ŉ\�ł��BWindows95���p�̍Œ���́A486DX2��50MHz�A�������[16MB�ʂƌ����Ă���A�����ȑO486SX�ŁA�������[12MB�̃m�[�g�p�\�R���ŁAWindows95�𓮂����Ă������Ƃ�����܂������A���p�Ƃ����ɂ́A�����������������Ǝv���܂��B���̃}�V���ł́A���̃}�V���̂��߂ɁAWindows95�̃C���X�g�[���������s���Ă����̂ł����A�������[8MB�AHD�e��80MB�ʂ�����̉����̂悤�ł��B386�}�V���ł����삷��悤�Ȃ̂ŁA�����������Ă݂����Ǝv���܂��B 
+     このPC9801BX2はロジックボードだけの、バラックセットで、富士通のFM-Rのシャシーにのって、9801BX用の電源で動いており、部品のチェック用に時々使います。CPUは486SX25MHz、IDEコネクタ2個、72pinSIMMスロット2個がついています。SIMMスロットのうち1個は、最大4MBまでしか認識できないので、もう1個の方に32MBを取り付けると、36MBまで可能です。Windows95実用の最低限は、486DX2の50MHz、メモリー16MB位と言われており、私も以前486SXで、メモリー12MBのノートパソコンで、Windows95を動かしていたことがありましたが、実用というには、少し無理があったと思います。このマシンでは、他のマシンのために、Windows95のインストール実験を行っていたのですが、メモリー8MB、HD容量80MB位が動作の下限のようです。386マシンでも動作するようなので、いつか実験してみたいと思います。 
      
 <hr>    
-<h3>386�Ŗ{���ɓ������H</h3>
-   386�}�V���ւ̃C���X�g�[���ł����A�����P�ɃC���X�g�[�����悤�Ƃ���ƁA Windows95�̃C���X�g�[�����A486�ȏ��CPU���K�v�ł��Ƃ����āA�~�܂��Ă��܂��܂��B������A�ǂ�����ď��z���邩���ۑ�ł��ˁB 
+<h3>386で本当に動くか？</h3>
+   386マシンへのインストールですが、ただ単にインストールしようとすると、 Windows95のインストーラが、486以上のCPUが必要ですといって、止まってしまいます。これを、どうやって乗り越えるかが課題ですね。 
      
 <hr>     
-<h3>PC9801DA�œ�����</h3>
-     �@PC9801DA��Windows95�𓮂������Ƃ��ł��܂����B12MB�̑��݃������ƁAC�o�XSCSI�{�[�hLHA301 SCSIHD��DNS-540�A500MB���g�p���A���炩����PC9821Xs�ŃC���X�g�[���ς݂̃V�X�e�����A�������� 
-  SCSIHD�ɏ��҂��܂��B������A9801DX�ɂȂ��܂��B���̂܂܂ł́AWindows95�̋N�����Ɏ~�܂��� ���܂��܂��̂ŁA�h�N�����Ă��܂��h�̃��b�Z�[�W���o���Ƃ���ŁA�t�@���N�V�����L�[�e�W�������܂��ƁA�N�����j���[���o�Ă��āA�N�����[�h�����ł��܂��B�Ƃ肠�����Asafe���[�h�ŗ����グ�A 
-  �l�q�����܂��B��́A�������A�h���C�o�[��g�ݍ���ł䂯�΂悢�Ǝv���܂����A���p�ɂȂ鑬�x�� �͓����܂���̂ŁA386�ł�Windows95�͓����A�Ƃ������Ƃ��������������ŁA�I���ɂ��܂��B 
-  �i�Q�O�O�Q�N�P���P�V���L�ځj   
+<h3>PC9801DAで動かす</h3>
+     　PC9801DAでWindows95を動かすことができました。12MBの増設メモリと、CバスSCSIボードLHA301 SCSIHDはDNS-540、500MBを使用し、あらかじめPC9821Xsでインストール済みのシステムを、そっくり 
+  SCSIHDに小ぴします。それを、9801DXにつなぎます。そのままでは、Windows95の起動中に止まって しまいますので、”起動しています”のメッセージが出たところで、ファンクションキーＦ８を押しますと、起動メニューが出てきて、起動モードを洗濯できます。とりあえず、safeモードで立ち上げ、 
+  様子を見ます。後は、少しずつ、ドライバーを組み込んでゆけばよいと思いますが、実用になる速度で は動きませんので、386でもWindows95は動く、ということが分かっただけで、終わりにします。 
+  （２００２年１月１７日記載）   
 <hr>  
 <h3>PC9801BX2</h3>
   <img src="pc9801bx2.jpg">
   <br>
-���̌㊮�S��PC9801BX2����肵�܂����B  
-<hr> �@ <a href="info9801.html">PC9801�̃y�[�W�ɖ߂�  </a>     
-<p>�@</p>
+その後完全なPC9801BX2を入手しました。  
+<hr> 　 <a href="info9801.html">PC9801のページに戻る  </a>     
+<p>　</p>
       <br>
 </body>
 </html>
