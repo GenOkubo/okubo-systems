@@ -2,63 +2,63 @@
 <html>
 <head>
   <title>FreeBSD(98)</title>
-                      
+                      <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
              
   <meta content="MSHTML 6.00.2600.0" name="GENERATOR">
 </head>
   <body bgcolor="#ffffff">
-   <a name="top">�@</a>     
-<h2>PC98��FreeBSD���C���X�g�[��</h2>
-    �����ł́A����PC9821V7�� FreeBSD 4.5 RELEASE�iGENERIC98�j���C���X�g�[������������Љ�܂��B<br>
+   <a name="top">　</a>     
+<h2>PC98にFreeBSDをインストール</h2>
+    ここでは、私がPC9821V7に FreeBSD 4.5 RELEASE（GENERIC98）をインストールした実例を紹介します。<br>
        
 <hr>    
-<h4>�O����</h4>
-     �@���܂łɁABSD�n�ł́ANetBSDmac68K���A���䂩�̌Â�Mac�ɃC���X�g�[�����Ă���A�ʂ̃y�[�W�ŊȒP�ɏЉ�Ă��܂��BNetBSDmac68K�́A�C���X�g�[������{���������o�Ă���A�܂��AMacOS����C���X�g�[���ł���̂ŁA��r�I�e�ՂɃC���X�g�[���ł��܂��BFreeBSD�i98�j�ɂ́A�O���狻�����������̂ł����A�ŋ߂̃����[�X�͂��Ȃ�g����悤�Ȃ̂ŁA����A�C���X�g�[���ɒ��킵�Ă݂܂����B
-  �Ȃ��APC98��BSD���Ƃ������Ƃł����APC98��Windows�Ŏg���ẮA����AT�݊��@�Ɠ����ŁA���񂪑��������Ŗʔ�������܂���BPC98��AT�݊��@��MacBSD�ł͋�J����A���{��\�����ȒP�ɂł��܂��BMS-DOS�̎���ɂ́ADOS/V���o������܂ŁA��΂ɗL���������A���̓��������������Ƃ��ł��܂��B
+<h4>前書き</h4>
+     　今までに、BSD系では、NetBSDmac68Kを、何台かの古いMacにインストールしており、別のページで簡単に紹介しています。NetBSDmac68Kは、インストール解説本が何冊も出ており、また、MacOSからインストールできるので、比較的容易にインストールできます。FreeBSD（98）には、前から興味があったのですが、最近のリリースはかなり使えるようなので、今回、インストールに挑戦してみました。
+  なぜ、PC98でBSDかということですが、PC98はWindowsで使っては、他のAT互換機と同じで、制約が多いだけで面白くありません。PC98はAT互換機やMacBSDでは苦労する、日本語表示が簡単にできます。MS-DOSの時代には、DOS/Vが出現するまで、絶対に有利だった、この特徴を活かすこともできます。
     
 <hr>    
-<h4>�g�p����}�V��</h4>
-    a.PC9821V7�A166MHz�ɉ����ρARAM40MB�B  <br>
-   b.HD��WDC AC2850F 810MB�A�Â�FMV����O�������́B <br>
-   c.EtheNet�J�[�h�́A�����R��LGY-PCI-TR�BNEC������10/100BASE-T-PCI�J�[�h�ł� ���v�ł����B <br>
+<h4>使用するマシン</h4>
+    a.PC9821V7、166MHzに改造済、RAM40MB。  <br>
+   b.HDはWDC AC2850F 810MB、古いFMVから外したもの。 <br>
+   c.EtheNetカードは、メルコのLGY-PCI-TR。NEC純正の10/100BASE-T-PCIカードでも 大丈夫でした。 <br>
        
 <hr>   
-<h4>�C���X�g�[���̏���</h4>
-    a.�C���X�g�[���p�̃t���b�s�[�A�z�z�t�@�C����p�ӂ��܂��B ���́ABSD magazine 2002 Number 11  �̕t�^CDROM���g���܂����BCD1��FreeBSD 
- 4.5-RELEASE��FreeBSD-PC98�ł��B�p�ӂ���t���b�s�[�f�B�X�N��1.44MB�i2HD�j�Q���ł��BMS-DOS��ŁACDROM��tools/dostools�f�B���N�g���̒���rawrite�Ƃ����AMS-DOS�̃c�[�����g���A�P����KERNEL144.flp�����P����mfsroot.flp���R�s�[���܂��B<br>
-    �z�z�t�@�C���́AAT�݊��@�p��bin�Asrc�Ȃǂ�PC98�p��98bin��98SRC�Ȃǂł��B�܂�AAT�݊��@�p��98�̍�����ǉ����邱�ƂɂȂ�킯�ł��BAT�݊��@�p��CDROM��4.5-RELEASE�����̂܂܎g���܂��B
-  PC98�����́AMS-DOS�̈��FREEBSD�Ƃ����f�B���N�g�������A���̒���98bin�A98src�Ajcatman���R�s�[���Ă����܂��B
+<h4>インストールの準備</h4>
+    a.インストール用のフロッピー、配布ファイルを用意します。 私は、BSD magazine 2002 Number 11  の付録CDROMを使いました。CD1のFreeBSD 
+ 4.5-RELEASEとFreeBSD-PC98です。用意するフロッピーディスクは1.44MB（2HD）２枚です。MS-DOS上で、CDROMのtools/dostoolsディレクトリの中のrawriteという、MS-DOSのツールを使い、１枚にKERNEL144.flpもう１枚にmfsroot.flpをコピーします。<br>
+    配布ファイルは、AT互換機用のbin、srcなどとPC98用の98binと98SRCなどです。つまり、AT互換機用に98の差分を追加することになるわけです。AT互換機用はCDROMの4.5-RELEASEがそのまま使えます。
+  PC98差分は、MS-DOS領域にFREEBSDというディレクトリを作り、その中に98bin、98src、jcatmanをコピーしておきます。
 <br>
-   b.�V�X�e���̎g�������l���AHD�̃p�[�e�B�V�����A�l�b�g���[�N�̌`�����߂܂��B ���̏ꍇ�́A�l�p�����������I�Ɏg�p���邾���Ȃ̂ŁAHD�̃p�[�e�B�V�����́AMS-DOS�̈�40MB�i���̗̈�́A�C���X�g�[������t�@�C�������Ă����̂ɂ��g���j�A/709MB��SWAP64MB�݂̂ɂ��܂��B
-  (���̐ݒ�ŁAX���[�U�ŃC���X�g�[�����āAHD�̎g�p���́A��50%�̂ɂȂ�)�l�b�g���[�N�́A�z�X�g��v7.okubosys.com�A�A�h���X192.168.1.130�ȂǂƓK���ɕt���܂��B<br>
+   b.システムの使い方を考え、HDのパーティション、ネットワークの形を決めます。 私の場合は、個人用しかも試験的に使用するだけなので、HDのパーティションは、MS-DOS領域40MB（この領域は、インストールするファイルを入れておくのにも使う）、/709MBとSWAP64MBのみにします。
+  (この設定で、Xユーザでインストールして、HDの使用率は、約50%のになる)ネットワークは、ホスト名v7.okubosys.com、アドレス192.168.1.130などと適当に付けます。<br>
     <br>
        
 <hr>    
-<h4>�C���X�g�[��</h4>
-    KERNEL144.flp��PC9821V7�ɓ���A�N�����܂��BBOOT���n�܂�A�₪�āAmfsroot.flp�ɓ���ւ���悤�Ɍ����܂��B��́A������܂܂ɑ��삵�čs���΂����̂ł����A/stand/sysinstall 
- Main Menu���o�Ă�����AS�W����I�т܂��B���Ƀp�[�e�B�j���O�ł����AMS-DOS�̈�40MB���󂳂Ȃ��悤�C��t���āA���̌���709MB��/��64MB��swap�����܂��B�����𔲂��āA���ɔz�z�t�@�C���̑I���ŁAX-���[�U��I�����܂��B���̎����A�z�z�}�̂̑I���ł����ACDROM�Ƃ��܂��B
+<h4>インストール</h4>
+    KERNEL144.flpをPC9821V7に入れ、起動します。BOOTが始まり、やがて、mfsroot.flpに入れ替えるように言われます。後は、言われるままに操作して行けばいいのですが、/stand/sysinstall 
+ Main Menuが出てきたら、S標準を選びます。次にパーティニングですが、MS-DOS領域40MBを壊さないよう気を付けて、その後ろに709MBの/と64MBのswapを作ります。そこを抜けて、次に配布ファイルの選択で、X-ユーザを選択します。その次が、配布媒体の選択ですが、CDROMとします。
   <br>
-   �C���X�g�[�����n�܂�A�₪�āA�u�z�z�t�@�C��98bin��CDROM����]���ł��܂���B������x�����Ă݂܂����H�v���\������܂��B���̂Ƃ��uYes�v��I�����܂��B���Ɂu���f�B�A�^�C�v��ύX���܂����H�v�ƕ\������܂��̂ŁA�A������uYes�v�Ɠ����܂��B�����āA�uDOS�v�̈��I�����A���炩����FREEBSD�f�B���N�g���ɃR�s�[���Ēu�����A98�p�̔z�z�t�@�C�����C���X�g�[�����܂��B
-  <br>
-       
-<hr>    
-<h4>�ݒ�</h4>
-    a.�܂��l�b�g���[�N�̐ݒ�ł��B�z�X�g����FQDN�œ��͂��܂��B���̏ꍇ�Av7.okubosys.com�ł��BIPv4�Q�[�g�E�G�C��192.168.1.1�A�l�[���T�[�o��192.168.1.1�AIPv4�A�h���X��192.168.1.130�A�l�b�g�}�X�N��255.255.255.0�ł��B
-  <br>
-    b.���ɁA�^�C���]�[���̐ݒ�Aroot�̃p�X���[�h�̐ݒ�A�T�[�o�̐ݒ�A�X�N���[���Z�[�o�̐ݒ�A�Ȃǂ��s���A�V�K���[�U���P���ݒ肵�܂��B���̕ӂ́AFreeBSD�i98�j�h�L�������e�[�V�������j���[��3�C���X�g�[���ɏڂ��������Ă���܂��B
+   インストールが始まり、やがて、「配布ファイル98binをCDROMから転送できません。もう一度試してみますか？」が表示されます。このとき「Yes」を選択します。次に「メディアタイプを変更しますか？」と表示されますので、、これも「Yes」と答えます。そして、「DOS」領域を選択し、あらかじめFREEBSDディレクトリにコピーして置いた、98用の配布ファイルをインストールします。
   <br>
        
 <hr>    
-<h4>�Ō��</h4>
-    ��ʂ�FreeBSD�i98�j�̃C���X�g�[���ɂ��ďЉ�܂������A���ۂɂ͎�肩�����Ă���A�C���X�g�[������������܂łɁA�������������Ă��܂��B��́A���̎g�����̂��A98��p�̃C���X�g�[��CD�ł͂Ȃ����߂ɁA�C���X�g�[���p�́A�f�B���N�g����ʂȃ��f�B�A�ɁA���Ȃ���΂Ȃ�Ȃ��������ƁB���́A�ŏ��Ɏg����HD�̋�������A�C���X�g�[���̍ŏ��̒i�K�ŁApanic 
- bad directoriy�@���o�āA�~�܂��Ă��܂���Ԃ����������Ƃł��BHD���������ď��߂Ă��܂��s���܂����B�݂Ȃ���Â�HD�ɂ͋C��t���Ă��������B
+<h4>設定</h4>
+    a.まずネットワークの設定です。ホスト名をFQDNで入力します。私の場合、v7.okubosys.comです。IPv4ゲートウエイを192.168.1.1、ネームサーバも192.168.1.1、IPv4アドレスは192.168.1.130、ネットマスクは255.255.255.0です。
   <br>
-   �Ō�ɂȂ�܂����A���̂悤�Ȃ��΂炵���\�t�g���J�����A�����Ŕz�z���Ă�������A�����̕��X�ɁA���ӂ̈ӂ�\�������Ǝv���܂��B<br>
-    �ڂ������́Ahttp://www.FreeBSD.org���瓾�邱�Ƃ��ł��܂��B(2002/4/11�L)    
-<hr> �Q�l���GFreeBSD(98)�O�����A�u���߂Ă̐l�ł����S�APC-UNIX�̃C���X�g�[���Ɗ��S���p�v2.2.1(98)SE�@SHOEISHA�@1998�@
+    b.他に、タイムゾーンの設定、rootのパスワードの設定、サーバの設定、スクリーンセーバの設定、などを行い、新規ユーザを１名設定します。この辺は、FreeBSD（98）ドキュメンテーションメニューの3インストールに詳しく書いてあります。
   <br>
-   ���Q�l�ɂ��܂����B�t����CDROM�AFD��2.2.1���ȒP�ɃC���X�g�[���ł��܂������A�o�[�W�������Â��̂ŁA����������������ŁA4.5�ōăC���X�g�[�����Ă��܂��B(2002/4/12�ǋL)
+       
+<hr>    
+<h4>最後に</h4>
+    一通りFreeBSD（98）のインストールについて紹介しましたが、実際には取りかかってから、インストールが完了するまでに、何日もかかっています。一つは、私の使ったのが、98専用のインストールCDではないために、インストール用の、ディレクトリを別なメディアに、作らなければならなかったこと。後一つは、最初に使ったHDの具合が悪く、インストールの最初の段階で、panic 
+ bad directoriy　が出て、止まってしまう状態があったことです。HDを交換して初めてうまく行きました。みなさん古いHDには気を付けてください。
+  <br>
+   最後になりますが、このようなすばらしいソフトを開発し、無料で配布してくださる、多くの方々に、感謝の意を表したいと思います。<br>
+    詳しい情報は、http://www.FreeBSD.orgから得ることができます。(2002/4/11記)    
+<hr> 参考書；FreeBSD(98)徹底入門、「初めての人でも安心、PC-UNIXのインストールと完全活用」2.2.1(98)SE　SHOEISHA　1998　
+  <br>
+   を参考にしました。付属のCDROM、FDで2.2.1が簡単にインストールできましたが、バージョンが古いので、やり方が分かった後で、4.5で再インストールしています。(2002/4/12追記)
       
 <hr>    
 <p><a href="#top">back to top</a></p>
