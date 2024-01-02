@@ -1,43 +1,43 @@
-<HTML><HEAD><TITLE>Windows95-OSR2</TITLE>
+<HTML><HEAD><TITLE>Windows95-OSR2</TITLE><meta charset="UTF-8">
 <body bgcolor="#ffffff">
-<H1>������ƌÂ�IBM21xxxx��Windows95-OSR2���C���X�g�[��</H1>
+<H1>ちょっと古いIBM21xxxxにWindows95-OSR2をインストール</H1>
 <p></p>
-���̃}�V���́A��ɓ��ꂽ�Ƃ���HD���A�d��������Ȃ��ƕ\������\3K�ł����B�{�̂���A
-MediaBox�Ƃ���CDROM�AFDD�AKB�R�l�N�^�A�}�E�X�R�l�N�^�A�d���X�C�b�`�̕t�������ɃP�[�u����
-��������A����܂Ȗ{�̂͊��̉��ɂł��u����悤�Ȍ`�ɂȂ��Ă��܂��BMODEM�J�[�h���O���ƁA
-�d��������܂����B���̂Ƃ��̏󋵂͂��̂悤�Ȃ��̂ł����B
+このマシンは、手に入れたときにHD欠、電源が入らないと表示され\3Kでした。本体から、
+MediaBoxというCDROM、FDD、KBコネクタ、マウスコネクタ、電源スイッチの付いた箱にケーブルで
+延長され、じゃまな本体は机の下にでも置けるような形になっています。MODEMカードを外すと、
+電源が入りました。そのときの状況はつぎのようなものでした。
 <br>
 1.CPU;PentiumODP200MHz<br>
 2.RAM;16MB72PinSIMMx4<br>
-3.HDD;�Ȃ�<br>
-4.CDROM�G�W�{���AMATSUSITA�@CR-583<br>
-5.FDD�G<br>
-6.MODEM;�s��<br>
+3.HDD;なし<br>
+4.CDROM；８倍速、MATSUSITA　CR-583<br>
+5.FDD；<br>
+6.MODEM;不良<br>
 7.SOUND;<br>
-8.�����p�J�[�h�G<br>
+8.延長用カード；<br>
 9.MediaBox;<br>
-<br>MediaBox�𕪉����ACDROM��FDD�����o���A�{�̂ɓ���邱�Ƃɂ��܂����B�{�̂́A�T�C���`
-�h���C�u�Q�A3.5�C���`�h���C�u2�`3�����t������悤�ɂȂ��Ă���A�@�B�I�ɂ���������
-�o���Ă��܂��B�l�W���}�C�i�X�l�W�ŁA�O���Â炩�����ł����A�h���C�u�ނ͂�����Ǝ��܂�܂����B
-HD�͎莝����2.5GB�����A���J����Windows95OSR2���������̂ŁA�C���X�g�[�����Ă݂܂����B
-OSR2�ł́AFAT32��USB���T�|�[�g����Ă��܂��B���̎���̂��Ƃ́A�悭�o���Ă��Ȃ��̂ŁA
-Windows95�A������OSR2�Ƃ͉��ł������̂��A���K�ł��B<br>
-�t���̃C���X�g�[��FD�ł́ACDROM��F�����Ȃ������̂ŁAAUTOEXEC.BAT��CONFIG.SYS�����������A
-�ėp��CDROM�h���C�o�ɓ���ւ��ACDROM����Windows95OSR2���C���X�g�[���B���̕ӂ�DOS�̒m����
-�Ȃ��ƁA��J����Ƃ���ł��BOS�̃C���X�g�[���͖����o���܂����̂ŁA�g���J�[�h�ނ̃C���X�g�[���ł��B
-�ǉ��Ƃ��A���ւ��������͎̂��̃J�[�h�ł��B
-1.VGA;OnBoard ATI RAGE ����Matrox MGA Ultima/Impression PCI�ɕύX<br>
+<br>MediaBoxを分解し、CDROMとFDDを取り出し、本体に入れることにしました。本体は、５インチ
+ドライブ２個、3.5インチドライブ2～3個が取り付けられるようになっており、機械的にもしっかり
+出来ています。ネジがマイナスネジで、外しづらかったですが、ドライブ類はきちんと収まりました。
+HDは手持ちの2.5GBを入れ、未開封のWindows95OSR2があったので、インストールしてみました。
+OSR2では、FAT32とUSBがサポートされています。この時代のことは、よく覚えていないので、
+Windows95、そしてOSR2とは何であったのか、復習です。<br>
+付属のインストールFDでは、CDROMを認識しなかったので、AUTOEXEC.BATとCONFIG.SYSを書き換え、
+汎用のCDROMドライバに入れ替え、CDROMからWindows95OSR2をインストール。この辺はDOSの知識が
+ないと、苦労するところです。OSのインストールは無事出来ましたので、拡張カード類のインストールです。
+追加とか、取り替えをしたのは次のカードです。
+1.VGA;OnBoard ATI RAGE からMatrox MGA Ultima/Impression PCIに変更<br>
 2.SOUND;Creative SoundBlaster16 ISA<br>
 3.SCSI;ADAPTEC AHA1510B ISA<br>
 4.NetWork;MELCO LGY-PCI-TR<br>
 <br>
-MELCO LGY-PCI-TR��OS���h���C�o�������Ă��Ȃ��̂ŁAFD����C���X�g�[������K�v���L��܂������A
-�ق��̃J�[�h�́A�����I�ɏo���܂����B���̂Ƃ��̃x���`�}�[�N���ȉ��Ɏ����܂��B
+MELCO LGY-PCI-TRはOSがドライバを持っていないので、FDからインストールする必要が有りましたが、
+ほかのカードは、自動的に出来ました。このときのベンチマークを以下に示します。
 <br><br>
- �� �� ��  HDBENCH Ver 2.610  �� �� ��<br> 
-�g�p�@��   MGA Ultima/Impression and DMA on<br>
+ ★ ★ ★  HDBENCH Ver 2.610  ★ ★ ★<br> 
+使用機種   MGA Ultima/Impression and DMA on<br>
 Processor  Pentium(MMX)ODP 199.3MHz [GenuineIntel family 15 model 4 step 3]<br> 
-�𑜓x     1024x768 65536�F(16Bit)  <br>
+解像度     1024x768 65536色(16Bit)  <br>
 Display    Matrox MGA Ultima/Impression PCI<br>
 Display    [?]ATI Graphics Pro Turbo PCI (mach64 RAGE/GT)<br>
 Memory     64,592Kbyte<br>
@@ -45,31 +45,31 @@ OS         Windows 95 4.0 (Build: 1111)  B<br>
 Date       2002/11/14  11: 8<br>
 <br>
 HDC = Intel 82371SB PCI Bus Master IDE Controller<br>
-HDC = �v���C�}�� IDE �R���g���[�� (�f���A�� FIFO)<br>
-HDC = �Z�J���_�� IDE �R���g���[�� (�f���A�� FIFO)<br>
+HDC = プライマリ IDE コントローラ (デュアル FIFO)<br>
+HDC = セカンダリ IDE コントローラ (デュアル FIFO)<br>
 <br>
 A = GENERIC NEC  FLOPPY DISK<br>    
 C = GENERIC IDE  DISK TYPE00    <br>
 D = MATSHITA CD-ROM CR-583    Rev BE30<br>
 <br>
-  ALL   ��    ��    ��    �~   Text Scroll DD  Read Write Memory Drive<br>
+  ALL   浮    整    矩    円   Text Scroll DD  Read Write Memory Drive<br>
  6611 11825 12343  9076  1375  6057    40   3  6696  5481 11872  C:10MB<br>
 <br>
-����ŁA1997�N�^��IBM�f�X�N�g�b�v�}�V�������������킯�ł����AOSR2�ŃT�|�[�g���ꂽ�͂���
-�AUSB���F������Ă��܂���B�����ŁA�Z�b�g�A�b�v���[�e�B���e�B�[����AIBM��BIOS�ɖ߂�܂��B
-BIOS�̃o�[�W�����́ABSTUS4G�@01/29/97�@�ŌÂ��͂Ȃ������ł��B�ݒ�𒲂ׂčs���ƁAUSB��
-�f�t�H���g�ł�Disable�ɂȂ��Ă��܂��B�����Enable�ɂ���K�v������܂����B�ċN������ƁA
-Windows��USB��F�����A�h���C�o��v�����Ă��܂��B���̂Ƃ��AOSR2��CDROM����ꂽ�����ł̓_����
-�A�h���C�o�̗v�����L�����Z�����ACDROM��other�t�H���_����USBsetup���N�����āA�h���C�o��
-�C���X�g�[�����܂��B�����USB���g����悤�ɂȂ�܂��B
+これで、1997年型のIBMデスクトップマシンが完成したわけですが、OSR2でサポートされたはずの
+、USBが認識されていません。ここで、セットアップユーティリティーから、IBMのBIOSに戻ります。
+BIOSのバージョンは、BSTUS4G　01/29/97　で古くはなさそうです。設定を調べて行くと、USBが
+デフォルトではDisableになっています。これをEnableにする必要がありました。再起動すると、
+WindowsがUSBを認識し、ドライバを要求してきます。このとき、OSR2のCDROMを入れただけではダメで
+、ドライバの要求をキャンセルし、CDROMのotherフォルダ内のUSBsetupを起動して、ドライバを
+インストールします。これでUSBが使えるようになります。
 <br>
-����BIOS�ł́A�h���C�u�̐ݒ��Auto���Ȃ��ALBA��CHS����I������悤�ɂȂ��Ă���A�f�t�H���g
-�ŁACHS�ɂȂ����肵�܂��̂ŁAHDD���Ȃ��ς����肷��ƁA�u�[�g�f�B�X�N���Ȃ��ƌ����āA
-����Ă邱�Ƃ�����܂��B
+このBIOSでは、ドライブの設定にAutoがなく、LBAかCHSかを選択するようになっており、デフォルト
+で、CHSになったりしますので、HDDをつなぎ変えたりすると、ブートディスクがないと言われて、
+あわてることがあります。
 <br><br>
-�����炵��JUNK���w������ƁA�����Ȃɂ��׋�����������̂ł��B
-(2002/11/29�L)
+あたらしいJUNKを購入すると、いつもなにか勉強させられるものです。
+(2002/11/29記)
 <p></p>
-<a href="infodos.html">�Â�AT�݊��@�֌W�̃y�[�W�ɖ߂� 
+<a href="infodos.html">古いAT互換機関係のページに戻る 
 </A>
-<P>�@</P></BODY></HTML>
+<P>　</P></BODY></HTML>
