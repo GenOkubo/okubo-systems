@@ -1,0 +1,75 @@
+<HTML><HEAD><TITLE>Windows95-OSR2</TITLE>
+<body bgcolor="#ffffff">
+<H1>ちょっと古いIBM21xxxxにWindows95-OSR2をインストール</H1>
+<p></p>
+このマシンは、手に入れたときにHD欠、電源が入らないと表示され\3Kでした。本体から、
+MediaBoxというCDROM、FDD、KBコネクタ、マウスコネクタ、電源スイッチの付いた箱にケーブルで
+延長され、じゃまな本体は机の下にでも置けるような形になっています。MODEMカードを外すと、
+電源が入りました。そのときの状況はつぎのようなものでした。
+<br>
+1.CPU;PentiumODP200MHz<br>
+2.RAM;16MB72PinSIMMx4<br>
+3.HDD;なし<br>
+4.CDROM；８倍速、MATSUSITA　CR-583<br>
+5.FDD；<br>
+6.MODEM;不良<br>
+7.SOUND;<br>
+8.延長用カード；<br>
+9.MediaBox;<br>
+<br>MediaBoxを分解し、CDROMとFDDを取り出し、本体に入れることにしました。本体は、５インチ
+ドライブ２個、3.5インチドライブ2～3個が取り付けられるようになっており、機械的にもしっかり
+出来ています。ネジがマイナスネジで、外しづらかったですが、ドライブ類はきちんと収まりました。
+HDは手持ちの2.5GBを入れ、未開封のWindows95OSR2があったので、インストールしてみました。
+OSR2では、FAT32とUSBがサポートされています。この時代のことは、よく覚えていないので、
+Windows95、そしてOSR2とは何であったのか、復習です。<br>
+付属のインストールFDでは、CDROMを認識しなかったので、AUTOEXEC.BATとCONFIG.SYSを書き換え、
+汎用のCDROMドライバに入れ替え、CDROMからWindows95OSR2をインストール。この辺はDOSの知識が
+ないと、苦労するところです。OSのインストールは無事出来ましたので、拡張カード類のインストールです。
+追加とか、取り替えをしたのは次のカードです。
+1.VGA;OnBoard ATI RAGE からMatrox MGA Ultima/Impression PCIに変更<br>
+2.SOUND;Creative SoundBlaster16 ISA<br>
+3.SCSI;ADAPTEC AHA1510B ISA<br>
+4.NetWork;MELCO LGY-PCI-TR<br>
+<br>
+MELCO LGY-PCI-TRはOSがドライバを持っていないので、FDからインストールする必要が有りましたが、
+ほかのカードは、自動的に出来ました。このときのベンチマークを以下に示します。
+<br><br>
+ ★ ★ ★  HDBENCH Ver 2.610  ★ ★ ★<br> 
+使用機種   MGA Ultima/Impression and DMA on<br>
+Processor  Pentium(MMX)ODP 199.3MHz [GenuineIntel family 15 model 4 step 3]<br> 
+解像度     1024x768 65536色(16Bit)  <br>
+Display    Matrox MGA Ultima/Impression PCI<br>
+Display    [?]ATI Graphics Pro Turbo PCI (mach64 RAGE/GT)<br>
+Memory     64,592Kbyte<br>
+OS         Windows 95 4.0 (Build: 1111)  B<br>
+Date       2002/11/14  11: 8<br>
+<br>
+HDC = Intel 82371SB PCI Bus Master IDE Controller<br>
+HDC = プライマリ IDE コントローラ (デュアル FIFO)<br>
+HDC = セカンダリ IDE コントローラ (デュアル FIFO)<br>
+<br>
+A = GENERIC NEC  FLOPPY DISK<br>    
+C = GENERIC IDE  DISK TYPE00    <br>
+D = MATSHITA CD-ROM CR-583    Rev BE30<br>
+<br>
+  ALL   浮    整    矩    円   Text Scroll DD  Read Write Memory Drive<br>
+ 6611 11825 12343  9076  1375  6057    40   3  6696  5481 11872  C:10MB<br>
+<br>
+これで、1997年型のIBMデスクトップマシンが完成したわけですが、OSR2でサポートされたはずの
+、USBが認識されていません。ここで、セットアップユーティリティーから、IBMのBIOSに戻ります。
+BIOSのバージョンは、BSTUS4G　01/29/97　で古くはなさそうです。設定を調べて行くと、USBが
+デフォルトではDisableになっています。これをEnableにする必要がありました。再起動すると、
+WindowsがUSBを認識し、ドライバを要求してきます。このとき、OSR2のCDROMを入れただけではダメで
+、ドライバの要求をキャンセルし、CDROMのotherフォルダ内のUSBsetupを起動して、ドライバを
+インストールします。これでUSBが使えるようになります。
+<br>
+このBIOSでは、ドライブの設定にAutoがなく、LBAかCHSかを選択するようになっており、デフォルト
+で、CHSになったりしますので、HDDをつなぎ変えたりすると、ブートディスクがないと言われて、
+あわてることがあります。
+<br><br>
+あたらしいJUNKを購入すると、いつもなにか勉強させられるものです。
+(2002/11/29記)
+<p></p>
+<a href="infodos.html">古いAT互換機関係のページに戻る 
+</A>
+<P>　</P></BODY></HTML>

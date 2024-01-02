@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>PC9801UX</title>
+   
+</head>
+  <body bgcolor="#ffffff">
+                                                                   
+<h1>PC9801UX</h1>
+                                  <img src="pc9801ux21.jpg" >
+                                  <br>
+                               
+<hr>          
+<h3>PC9801UXの主な仕様</h3>
+        型　名　　　：PC-9801UX21 <br>
+      出荷日　　 ：87/10 CPU<br>
+      クロック　　：V308MHz/8028610MHz  <br>
+      ROM　　　　：N88-BASIC(86)及びモニタ96KB <br>
+      標準RAM　　　　　        ：　640KB <br>
+      最大ユーザーズメモリ　 ：　6.6MB <br>
+      グラフィックVRAM容量　：　256KB  <br>
+      グラフィックVRAM画素数：　640*400 <br>
+      グラフィックVRAM色数　：　4096色中16色2画面 <br>
+      サウンドVRAM　　　　：　16KB <br>
+      テキストVRAM　　　　 ：　12KB <br>
+      拡張スロット数　　    ：　3 拡張スロット<br>
+      電源容量　+ 5V ：0.8A 　　            　　　+12V ：0.06A 　　              　　-12V 
+：0.07A   <br>
+      標準実装ドライブ　 FDD　 ：3.5インチ1M/640KFDD2-DRIVE <br>
+      内蔵インタフェースコネクタ：1MFDDI/F　 プリンタI/F　 RS-232CI/F ：マウスI/F　 B/WCRTI/F　 デジタルCRTI/F
+   　　　　           　　　 ：アナログCRTI/F　　　 <br>
+      漢字：標準:第一、第二、拡張 <br>
+      サウンド機能　　　　：標準実装 <br>
+      カレンダ時計　　　　：μPD4990使用年サポートあり  <br>
+      ＶＣＣＩ適合　 　　 ：基準レベル4 使用条件　　　<br>
+      電圧　：AC100V±10% 　周波数：50/60　温度　：10～35　　湿度　：20～80%(結露なし)<br>
+       消費電力 標準　(W)　：90 　　　　 最大　(W)　：110   <br>
+      外形寸法　本　体 (mm)　(W)：398　(D)：335　(H)：128 　　　　<br>
+      キーボード(mm)　　　(W)：435　(D)：180　(H)：34  重量　本体　 (Kg) ：7.8 　　　<br>
+      キーボード(Kg) ：1.2<br>
+  <br>
+   
+<hr>    
+<h3>このマシンに入っていたCPUアクセラレータHSP-16DR</h3>
+    <img src="hsp16dr.jpg">
+  <br>
+   Cyrixの486SLCを使用した、CPUアクセラレータです。これを単に286のソケットに刺しただけでは、早くなりません。<br>
+  486SLCのCacheを使えるよう、デバイスドライバを入れてやる必要があります。製品には当然添付されていたあ<br>
+  と思いますが、中古の本体だけ入手した場合はなにもないので、フリーウエアなどを探して、インストールすることに<br>
+  なります。今回は、VectorのDOSソフトから、<tt>TAKO氏の作成された</tt>CX.EXEをダウンロードし、config.sysにDEVICE<br>
+  ＝a:\CD.EXEを追加したやりました。スピードはPiを1000桁計算するプログラムを走らせたところ、４５秒と486らしい<br>
+  性能になりました。<br>
+  <br>
+   
+<hr>                         
+<h3>PC9801UXのディップスイッチの設定</h3>
+                ディップスイッチの設定をメモしておきます。スイッチは上方向がOFF、下方向がONです。<br>
+               ＳＷ１<br>
+                             
+<table cellpadding="2" cellspacing="2" border="1" width="100%">
+                 <tbody>
+                   <tr>
+                     <td valign="top">スイッチ番号<br>
+                     </td>
+                     <td valign="top">　　　　　　　目　的<br>
+                     </td>
+                     <td valign="top">　　　　　　　　　　ON<br>
+                     </td>
+                     <td valign="top">　　　　　　　　OFF<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">１<br>
+                     </td>
+                     <td valign="top">ディスプレイの種類<br>
+                     </td>
+                     <td valign="top">専用高解像度ディスプレイの使用<br>
+                     </td>
+                     <td valign="top">標準ディスプレイの使用<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">２<br>
+                     </td>
+                     <td valign="top">スーパーインポーズ機能の選択<br>
+                     </td>
+                     <td valign="top">使用する<br>
+                     </td>
+                     <td valign="top">使用しない<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">３<br>
+                     </td>
+                     <td valign="top">プラズマディスプレイの使用指定<br>
+                     </td>
+                     <td valign="top">使用する<br>
+                     </td>
+                     <td valign="top">使用しない<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">４<br>
+                     </td>
+                     <td valign="top">フロッピーディスク機能の選択<br>
+                     </td>
+                     <td valign="top">内蔵が#3、#4外付けが#1,#2<br>
+                     </td>
+                     <td valign="top">内蔵が#1、#2外付けが#3,#4<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">５<br>
+                     </td>
+                     <td valign="top">RS232Cの伝送モード<br>
+                     </td>
+                     <td valign="top">5,6　ON　BCI同期<br>
+                     </td>
+                     <td valign="top">5,6　OFF　調歩同期（非同期）<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">６<br>
+                     </td>
+                     <td valign="top">RS232Cの伝送モード<br>
+                     </td>
+                     <td valign="top">5ON、6OFF　ST2同期<br>
+                     </td>
+                     <td valign="top">5OFF、6ON　同期刻時機能<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">７<br>
+                     </td>
+                     <td valign="top">未使用　<br>
+                     </td>
+                     <td valign="top"><br>
+                     </td>
+                     <td valign="top">常時OFF<br>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td valign="top">８<br>
+                     </td>
+                     <td valign="top">ROMグラフサブルーチンの<br>
+               モード選択<br>
+                     </td>
+                     <td valign="top">拡張グラフィックモード<br>
+                     </td>
+                     <td valign="top">基本グラフィックモード<br>
+                     </td>
+                   </tr>
+                                                           
+  </tbody>               
+</table>
+               <br>
+               ＳＷ２<br>
+                               
+<table cellpadding="2" cellspacing="2" border="1" width="100%">
+                  <tbody>
+                    <tr>
+                      <td valign="top">スイッチ番号<br>
+                      </td>
+                      <td valign="top">　　　　　　　目　的<br>
+                      </td>
+                      <td valign="top">　　　　　　　　　ON<br>
+                      </td>
+                      <td valign="top">　　　　　OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">１<br>
+                      </td>
+                      <td valign="top">未使用　<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">２<br>
+                      </td>
+                      <td valign="top">ターミナルモード使用の指定<br>
+                      </td>
+                      <td valign="top">直接ターミナルモードを起動する<br>
+                      </td>
+                      <td valign="top">BASICモード<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">３<br>
+                      </td>
+                      <td valign="top">テキスト画面のキャラクタ表示数指定<br>
+                      </td>
+                      <td valign="top">８０文字/行<br>
+                      </td>
+                      <td valign="top">４０文字/行<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">４<br>
+                      </td>
+                      <td valign="top">テキスト画面のキャラクタ表示数指定<br>
+                      </td>
+                      <td valign="top">２５行/画面<br>
+                      </td>
+                      <td valign="top">２０行/画面<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">５<br>
+                      </td>
+                      <td valign="top">メモリスイッチ初期化の指定<br>
+                      </td>
+                      <td valign="top">メモリスイッチの状態を変化させる<br>
+               ことができる<br>
+                      </td>
+                      <td valign="top">システム立ち上げ時に<br>
+               規定値で初期化する<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">６<br>
+                      </td>
+                      <td valign="top">本体内蔵３．５インチ固定ディスクの<br>
+               切り離し指定<br>
+                      </td>
+                      <td valign="top">切り離す<br>
+                      </td>
+                      <td valign="top">使用する<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">７<br>
+                      </td>
+                      <td valign="top">未使用<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">８<br>
+                      </td>
+                      <td valign="top">ROMグラフサブルーチンのGDCモード<br>
+               指定<br>
+                      </td>
+                      <td valign="top">GDC　5MHzモード<br>
+                      </td>
+                      <td valign="top">GDC　2.5MHzモード<br>
+               （通常OFFで使用する）<br>
+                      </td>
+                    </tr>
+                                                               
+  </tbody>                
+</table>
+               <br>
+               ＳＷ３<br>
+                               
+<table cellpadding="2" cellspacing="2" border="1" width="100%">
+                  <tbody>
+                    <tr>
+                      <td valign="top">スイッチ番号<br>
+                      </td>
+                      <td valign="top">　　　　　　　　目　的<br>
+                      </td>
+                      <td valign="top">　　　ON<br>
+                      </td>
+                      <td valign="top">　　　　　　　OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">１<br>
+                      </td>
+                      <td valign="top">内蔵フロッピーディスクの動作指定<br>
+                      </td>
+                      <td valign="top">固定モード<br>
+                      </td>
+                      <td valign="top">自動切り替えモード<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">２<br>
+                      </td>
+                      <td valign="top">内蔵フロッピーディスクの動作指定<br>
+                      </td>
+                      <td valign="top">640KBモード<br>
+                      </td>
+                      <td valign="top">1MBモード<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">３<br>
+                      </td>
+                      <td valign="top">未使用<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">４<br>
+                      </td>
+                      <td valign="top">未使用<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">５<br>
+                      </td>
+                      <td valign="top">未使用<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">６<br>
+                      </td>
+                      <td valign="top">内蔵RAMの容量を変更する<br>
+                      </td>
+                      <td valign="top">512KBにする<br>
+                      </td>
+                      <td valign="top">640KBにする<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">７<br>
+                      </td>
+                      <td valign="top">未使用<br>
+                      </td>
+                      <td valign="top"><br>
+                      </td>
+                      <td valign="top">常時OFF<br>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top">８<br>
+                      </td>
+                      <td valign="top">CPUの指定<br>
+                      </td>
+                      <td valign="top">80286<br>
+                      </td>
+                      <td valign="top">μPD70116（V30）<br>
+                      </td>
+                    </tr>
+                                                               
+  </tbody>                
+</table>
+               <br>
+                (2003/05/12　記)<br>
+                               
+<hr>　   <a href="info9801.html">PC9801のページに戻る </a>                   <br>
+                
+</body>
+</html>

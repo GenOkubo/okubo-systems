@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>PC9821As</title>
+   
+</head>
+<body bgcolor="#ffffff">
+   
+<h1>PC9821AsをWindows95で動作させるまで</h1>
+ <br>
+  <img src="pc98as.jpg">
+  <br>
+  2002年1月31日記載<br>
+       
+<hr>   このPC9821Aｓは、だいぶ前にただでもらった物で、動作だけは確認して、そのままに していた。その後、PC98用の、ジャンク部品がたまってきて、AsをWindows95で動作させる
+ のに必要な部品がそろったので、組み上げてインストールしてみた。 使った部品は、いずれも相当なジャンクで、動作保証はない。　      <br>
+ 　 　 
+<table border="1" width="100%">
+     <tbody>
+     <tr>
+       <th>部品名</th>
+       <th>型名</th>
+       <th>仕様その他</th>
+     </tr>
+     <tr>
+       <td>CPU  </td>
+       <td>486DXを486DX2に交換</td>
+       <td>66MHz</td>
+     </tr>
+     <tr>
+       <td>HD </td>
+       <td>Quamtum Fire Ball AT</td>
+       <td>540MB専用ケースに取り付け</td>
+     </tr>
+     <tr>
+       <td>増設メモリ </td>
+       <td>I/O　DATA</td>
+       <td>8MB　61互換？</td>
+     </tr>
+     <tr>
+       <td>SCSIカード</td>
+       <td>Logitech　LHA15FA</td>
+       <td><br>
+       </td>
+     </tr>
+   <tr>
+       <td>CDROM</td>
+       <td>NEC純正</td>
+       <td>等倍速SCSIインターフェイス</td>
+     </tr>
+     <tr>
+       <td>ウインドウアクセラレータ</td>
+       <td>NEC純正ボードA（S3）</td>
+       <td>３２ビットローカルバス専用</td>
+     </tr>
+     <tr>
+       <td>その他</td>
+       <td>インストールに使う外付けSCSIHD500MBとCバス用SCSIボード</td>
+       <td><br>
+       </td>
+     </tr>
+     
+  </tbody> 
+</table>
+  <br>
+    内蔵のCDROMを、DOSで認識させることができなかったので、CDROMの付いた他の98で、外付け SCSIHDにWIn95をそっくりコピーしておき、外付けHDからインストールする方法を取りました。
+ まず、FDからDOSを立ち上げ、内蔵HDをフォーマットし、システムを転送しておきます。つぎに 内蔵HDから立ち上げ、外付けSCSUHDのWin95のsetup.exeを起動します。後は、まったく問題なく
+ インストールが進み、SCSIカードのドライバがインストールされると、CDROMが使えるように なりました。この機種では、メモリーを十分につむことができないので、実用には無理だと思い
+ ますが、古い部品が全部ちゃんと動いてくれただけで喜んでいます。  
+<hr>  <img src="pc98ashd.jpg">
+   
+<hr>  
+<h3>PC9821Asのメモリー増設</h3>
+  2002年2月26日記載<br>
+   
+<p>PC98-61互換というメモリ（72pinSIMM-2MB）を見つけてきたので、増設メモリボードに追加してみた。 今までの12MBに１枚追加で14MB、もう１枚追加して15MBになった。16MBには本体の仕様上ならない。
+ このときにとったベンチマークを載せておきます。<br>
+  ★ ★ ★  HDBENCH Ver 2.610  ★ ★ ★<br>
+   使用機種   PC9821As<br>
+  Processor  i486DX2  [GenuineIntel family 4 model 3 step 5] <br>
+  解像度     1024x768 256色(8Bit) <br>
+   Display    [X]スタンダード ディスプレイ アダプタ (9821 シリーズ)<br>
+  Display    ウィンドウ アクセラレータ ボード A (S3)<br>
+  Memory     13,752Kbyte<br>
+  OS         Windows 95 4.0 (Build: 950) <br>
+  Date       2002/ 2/24  16:18<br>
+  <br>
+  SCSI = NEC PC-9801-55/L/U/FA-02、PC-9801-92/PC-9821A-E10 (DMA Transfer Mode)<br>
+  HDC = スタンダード IDE ハード ディスク コントローラ<br>
+  <br>
+  A = GENERIC IDE  DISK TYPE00<br>
+      B = GENERIC NEC  FLOPPY DISK<br>
+      C = NEC CD-ROM DRIVE 2   Rev <br>
+  <br>
+    ALL   浮    整    矩    円   Text Scroll DD  Read Write Memory Drive<br>
+   1671  1849  2726  2668  1435  1566    45   1  1055  2024  1508  A:10MB<br>
+  </p>
+       
+<hr> <a href="info9821.html">PC9821のページに戻る </a>  
+<p>　</p>
+ <br>
+ 
+</body>
+</html>
