@@ -2,104 +2,104 @@
 <html>
 <head>
   <title>PC-98 FDD </title>
-   
+  <meta charset="UTF-8">
 </head>
   <body bgcolor="#ffffff">
-               �@                
-<h1>(���̂P)CHINON FZ-356��PC-98�Ŏg�p�ł���悤�ɂ���</h1>
+               　                
+<h1>(その１)CHINON FZ-356をPC-98で使用できるようにする</h1>
 <pre>
-�@JUNK��ELECOM���O�t��FDD�AFDD-3.5S�𕪉������Ƃ���ACHINON��noFDD�AFZ-356��
-�o�Ă��܂����BCHINON�̓J�������[�J�Ƃ��Ă͒m���Ă��܂������AFDD������Ă������Ƃ�
-�������̂ł��ˁB�C���^�[�l�b�g���������Ă��A�J���������C�������q�b�g���܂���B
-�@����FDD��PC-98�ɐڑ������Ƃ���AV-7��V-166�œ�����m�F�ł��܂����B9801DX�ł́A
-�c�O�Ȃ��琳��ɓ��삵�܂���B�R�l�N�^���̃V���[�g�v���O�ݒ肪������΂����̂ł����B
-���낢�뒲�ׂ����ʁA���̂��Ƃ�����������܂����B
+　JUNKなELECOM製外付けFDD、FDD-3.5Sを分解したところ、CHINON製noFDD、FZ-356が
+出てきました。CHINONはカメラメーカとしては知っていましたが、FDDを作っていたことが
+あったのですね。インターネットを検索しても、カメラかワインしかヒットしません。
+　このFDDをPC-98に接続したところ、V-7とV-166で動作を確認できました。9801DXでは、
+残念ながら正常に動作しません。コネクタ部のショートプラグ設定が分かればいいのですが。
+いろいろ調べた結果、次のことだけが分かりました。
 
-  �L���@�@�Ӗ��@�@�@�@�@�@          �v���O
-�EDS0�@;�@Drive Select0              3-5  on
-�EDS1  ;  Drive Select1              1-3  on
-�EDS2  ;  Drive Select2              2-4  on
-�EDS3  ;  Drive Select3              4-6  on 
-�EMM   ;  I/F 4pin Mode Select In    7-8  on 
-�EMD   ;  I/F 2pin Mode Select In    8-10 on
-�ERDY  ;  I/F 34pin Ready Out       11-12 on
-�EDC   ;  I/F 34pin Disk Change Out  9-11 on
-�ETTL  ;  OpenCorrector OutPut      13-14 on
-�ECMOS ;  3 State OutPut            13-14 off
+  記号　　意味　　　　　　          プラグ
+・DS0　;　Drive Select0              3-5  on
+・DS1  ;  Drive Select1              1-3  on
+・DS2  ;  Drive Select2              2-4  on
+・DS3  ;  Drive Select3              4-6  on 
+・MM   ;  I/F 4pin Mode Select In    7-8  on 
+・MD   ;  I/F 2pin Mode Select In    8-10 on
+・RDY  ;  I/F 34pin Ready Out       11-12 on
+・DC   ;  I/F 34pin Disk Change Out  9-11 on
+・TTL  ;  OpenCorrector OutPut      13-14 on
+・CMOS ;  3 State OutPut            13-14 off
 
- �������Ă��邤���ɁA�����JUNK��DECpc433dxLP������ł��A486�V�т��ł����̂ł����A425sxLP
-������̂ŁA433dxLP�𕪉����������邱�Ƃɂ��܂����B�i486�V�тɂ��ẮA�ʃy�[�W�̃}�U�[
-�{�[�h�V�тɏ����\��j��������A�܂�FZ-356���o�Ă��܂����B���̂Q��FDD�̃V���[�g�v���O��
-��r����΁APC/AT�p��FZ-356��PC-98�p�ɕύX�i�����ł͂Ȃ��j���鎖���ł���͂��ł��B
-�@
+ そうしているうちに、これもJUNKなDECpc433dxLPが入手でき、486遊びができたのですが、425sxLP
+もあるので、433dxLPを分解し処分することにしました。（486遊びについては、別ページのマザー
+ボード遊びに書く予定）そこから、またFZ-356が出てきました。この２個のFDDのショートプラグを
+比較すれば、PC/AT用のFZ-356をPC-98用に変更（改造ではなく）する事ができるはずです。
+　
 </pre>
 <hr>
-<h2>FZ-356���ォ�猩���Ƃ���</h2>                <br>
-�@<img src="fz3562.jpg">
+<h2>FZ-356を上から見たところ</h2>                <br>
+　<img src="fz3562.jpg">
 <hr>
-<h2>FZ-356�@�R�l�N�^��</h2>               <br>
+<h2>FZ-356　コネクタ部</h2>               <br>
  <img src="fz356.jpg">
 <hr>
 <pre>
-  REV.A��PC-98�pFDD�̐ݒ�͂��̂悤�ɂȂ��Ă��܂����B
-�EDS1 ; on
-�EMD  ; on
-�ERDY ; on
-�ETTL ; on
+  REV.AのPC-98用FDDの設定はこのようになっていました。
+・DS1 ; on
+・MD  ; on
+・RDY ; on
+・TTL ; on
 
 
-  REV.A01��PC/AT�pFDD�̐ݒ�͂��̂悤�ɂȂ��Ă��܂����B
-�EDS0 ; on
-�EMD  ; on
-�ERDY ; on
-�ETTL ; on
+  REV.A01のPC/AT用FDDの設定はこのようになっていました。
+・DS0 ; on
+・MD  ; on
+・RDY ; on
+・TTL ; on
 
-�@������Q�l�ɁA�ݒ��ύX����΂����͂��ł��̂ŁA�ɂ������Ď������Ă݂����Ǝv���܂��B
+　これを参考に、設定を変更すればいいはずですので、暇を見つけて実験してみたいと思います。
 </pre>
- �i2003/08/10�@�L�j<br>
+ （2003/08/10　記）<br>
 <hr>        
-<pre>�������Ă݂܂����B�g�p�����̂́APC-9821V12/S7RB�ŁA���L�̐ݒ��REV.A01��FDD���g�p�\�ɂȂ�܂����B
+<pre>実験してみました。使用したのは、PC-9821V12/S7RBで、下記の設定でREV.A01のFDDが使用可能になりました。
 
-�EDS0 ; on
-�EMM  ; on
-�ERDY ; on
-�ETTL ; on
+・DS0 ; on
+・MM  ; on
+・RDY ; on
+・TTL ; on
 </pre>
 
- �i2003/08/10�@�ǋL�j<br>                 
+ （2003/08/10　追記）<br>                 
 <hr>
-<h1>(���̂Q)FM-TOWNS�p��FDD��PC-98�Ŏg�p�ł���</h1>
-�@PC/AT�݊��@�ł͂Ȃ���������܂��񂪁A����FM-TOWNS����������3.5�C���`FDD���Q�䂠��܂��BHAMLIN����̃f�[�^�ɂ��ƁA
-98�ł��g�p�\�ŁA�T�C���`�Ƃ��ĔF�������Ƃ̂��ƂȂ̂ŁA�������Ă݂܂����B
+<h1>(その２)FM-TOWNS用のFDDがPC-98で使用できる</h1>
+　PC/AT互換機ではないかもしれませんが、初代FM-TOWNSから回収した3.5インチFDDが２台あります。HAMLINさんのデータによると、
+98でも使用可能で、５インチとして認識されるとのことなので、実験してみました。
 <br>
 <img src="b03l45050213a.jpg">
 <pre>
-�@���ɂ͈ȉ��̂悤�ȋL�q������܂��B
-�E�^���G03L-4505-0213A
-�EDATE�G1989-04
-�ENo. �G1093-0211
-�E���[�J�FFUJITSU�@LIMITED
-�@����ɁA�R�l�N�^�̕t���Ă���A�v�����g��ɂ͈ȉ��̋L�q������A
-�EPN134526-41
-�EREV.D
-�@�h���C���i��]�����j�̊�Ղɂ�
-�EDFX-64D3
-�EMATSUSITA
-�@�Ə����Ă���܂��B������̃��x����ǂݗ��Ƃ��Ƃ���ł����B34pin�̃R�l�N�^�̏�̃A���~��_�C�L���X�g
-�����ɁAYE-DATA�@YD-686C1506C�@B�@S/N�@10930211�@8914�@�̃��x��������܂��B
+　銘板には以下のような記述があります。
+・型式；03L-4505-0213A
+・DATE；1989-04
+・No. ；1093-0211
+・メーカ：FUJITSU　LIMITED
+　さらに、コネクタの付いている、プリント基板には以下の記述があり、
+・PN134526-41
+・REV.D
+　ドライヴ（回転部分）の基盤には
+・DFX-64D3
+・MATSUSITA
+　と書いてあります。もう一つのラベルを読み落とすところでした。34pinのコネクタの上のアルミ台ダイキャスト
+部分に、YE-DATA　YD-686C1506C　B　S/N　10930211　8914　のラベルがあります。
 
-�@���ۂɁAPC-9821Xa10/K8�ɂȂ��ł݂�ƁAWindows98���猩��ƁAB�h���C�u�ɂT�C���`FDD������܂����B
-1.2MB��FD�͓ǂ߂܂��B1.44MB�͂������_���ł��B640KB���F�����܂���ł����B1.2MBFD��DOS������ǂ߁ABoot
-�h���C�u�ɂȂ�܂����B
-�@���̃h���C�u���q�ׂɌ���ƁA���̎ʐ^�̂悤�ɁA�d���R�l�N�^�ׂ̗ɁA�Q��ނ̃W�����p�[������܂��B
-��͂Spin�ŁADS0����DS3�A�h���C�u�Z���N�g�Ɠǂ߂܂��B������͂Vpin�ŁAP3�AP2�AP1�AOP�AWR�ATD�ATW�ƕ���ł���A
-P2�AP1�AOP�AWR��on�ɂȂ��Ă��܂��B���̈Ӗ���������΁A�ݒ肪�ύX�ł��邩������܂���B
-�@�����������ׂĂ���A�������Ă݂����Ǝv���܂��B�@
+　実際に、PC-9821Xa10/K8につないでみると、Windows98から見ると、Bドライブに５インチFDDがありました。
+1.2MBのFDは読めます。1.44MBはもちろんダメです。640KBも認識しませんでした。1.2MBFDはDOSからも読め、Boot
+ドライブになりました。
+　このドライブを子細に見ると、下の写真のように、電源コネクタの隣に、２種類のジャンパーがあります。
+一つは４pinで、DS0からDS3、ドライブセレクトと読めます。もう一つは７pinで、P3、P2、P1、OP、WR、TD、TWと並んでおり、
+P2、P1、OP、WRがonになっています。この意味が分かれば、設定が変更できるかもしれません。
+　もう少し調べてから、実験してみたいと思います。　
 </pre>
 <img src="b03l45050213ac.jpg">
-�i2003/09/08�@�L�j
+（2003/09/08　記）
 <hr>
- <a href="../index.html">�z�[���y�[�W�ɖ߂�  </a>                
+ <a href="../index.html">ホームページに戻る  </a>                
 
 </body>
 </html>
