@@ -1,68 +1,68 @@
-<HTML><HEAD><TITLE>ALL-SCSI</TITLE>
+<HTML><HEAD><TITLE>ALL-SCSI</TITLE><meta charset="UTF-8">
 <body bgcolor="#ffffff">
-<H1>�t���^���[486�}�V����ALL-SCSI�̃\�P�b�g7�}�V����</H1>
+<H1>フルタワー486マシンをALL-SCSIのソケット7マシンに</H1>
 <p></p>
-���̃}�V���̓J�i�_cotex�А��̃t���^���[486AT�݊��@�ł��B1995�N����ɓ��ꂽ�Ƃ���HD��,
-��\3K�ł����B�O�ς͌Â߂������A�T�i�̂T�C���`�x�C�ɂ́A�ォ��3.5�C���`FDD�A5�C���`FDD�A
-24�{��CDROM�������Ă���Aintelinside�̃X�e�B�b�J�[���\���āA�ւ炵����486CACHE�A
-66MHz�̃G���u�������t���Ă��܂��B�����ɓd�������Ă݂��Ƃ���ABIOS�������オ��CPU�@
-K6-2�@300MHz�ƕ\�����Ă��܂��B��������486�}�V������ɓ��ꂽ�Ɗ��ł����̂ɁA���ł�
-�O�̃��[�U���A�b�v�O���[�h���ς܂��Ă����̂ł��B�J�o�[���J���Ă݂�ƁA�������ɁA
-486�ł͂���܂���ˁB���̂Ƃ��m�F������Ԃ͎��̂悤�ȕ��ł����B<br>
-1.�d���G220W�A�I���W�i���炵���B��1���FAN�����B<br>
-2.3.5�C���`FDD�GEPSON�A�P�[�u�����̂T�C���`�R�l�N�^�ɕϊ�����A�_�v�^�t���B<br>
-3.5�C���`FDD�GEPSON�A��2��ŕ��𐴑|�B<br>
-4.CDROM�G24�{���Ȃ̂ŃA�b�v�O���[�h���Ɍ����������炵���B<br>
-5.�}�U�[�{�[�h�GSOYO5EAS�@Sockt7-AT<br>
-6.RAM�G72Pin-SIMM�A32MBx2<br>
-7.CPU�GK6-2-300MHzAFR66�@2.2Vcore/3.3Vio<br>
-8.VGA�GS3Trio-PCI<br>
+このマシンはカナダcotex社製のフルタワー486AT互換機です。1995年製手に入れたときにHD欠,
+で\3Kでした。外観は古めかしく、５段の５インチベイには、上から3.5インチFDD、5インチFDD、
+24倍速CDROMが入っており、intelinsideのスティッカーが貼られて、誇らしげに486CACHE、
+66MHzのエンブレムが付いています。試しに電源を入れてみたところ、BIOSが立ち上がりCPU　
+K6-2　300MHzと表示しています。せっかく486マシンを手に入れたと喜んでいたのに、すでに
+前のユーザがアップグレードを済ませていたのです。カバーを開けてみると、たしかに、
+486ではありませんね。このとき確認した状態は次のような物でした。<br>
+1.電源；220W、オリジナルらしい。＊1後でFAN交換。<br>
+2.3.5インチFDD；EPSON、ケーブル側の５インチコネクタに変換するアダプタ付き。<br>
+3.5インチFDD；EPSON、＊2後で分解清掃。<br>
+4.CDROM；24倍速なのでアップグレード時に交換した物らしい。<br>
+5.マザーボード；SOYO5EAS　Sockt7-AT<br>
+6.RAM；72Pin-SIMM、32MBx2<br>
+7.CPU；K6-2-300MHzAFR66　2.2Vcore/3.3Vio<br>
+8.VGA；S3Trio-PCI<br>
 <br>
-�Ƃ肠�����AWindowsMe�̓����Ă���JUNK��HD���Ȃ��ł݂�ƁA�V�X�e�����N�����A����m�F
-���o���܂����B�������A�d����FAN���U�����ى����o���̂ŁA������FAN�������邱�Ƃɂ��܂����B
-�d���̃T�C�Y�́A����300W�^��1.5�{�ʗL��܂��B���������āA�����̓X�y�[�X�������Ղ肠��A
-FAN�����͊y�ɏo���܂����B���łɁA���̂ق��̕��������т��g������A�G��^�I���Ő@������
-���Ă��ꂢ�ɂ��܂��B���ɁA�T�C���`FD���ǂ߂܂���BFDD�͉�]����̂ł����A���f�B�A��
-�F���ł��܂���B���̂������Ǝv���A�������Đ��|����ƁA����ɓǂ߂�悤�ɂȂ�܂����B
-�T�C���`FD���g�����ƂȂǖ����Ǝv���܂����A���p�����l���Ă����JUNK���y�ɂȂ�܂���B
+とりあえず、WindowsMeの入っているJUNKなHDをつないでみると、システムが起動し、動作確認
+が出来ました。しかし、電源のFANが振動し異音を出すので、分解しFAN交換することにしました。
+電源のサイズは、今の300W型の1.5倍位有ります。したがって、内部はスペースがたっぷりあり、
+FAN交換は楽に出来ました。ついでに、そのほかの部分も刷毛を使ったり、濡れタオルで拭いたり
+してきれいにします。つぎに、５インチFDが読めません。FDDは回転するのですが、メディアを
+認識できません。埃のせいかと思い、分解して清掃すると、正常に読めるようになりました。
+５インチFDを使うことなど無いと思いますが、実用性を考えているとJUNK道楽になりません。
 <br>
-�S���̌���m�F���o�����̂ŁA�p�~���Ă��܂���ALL-SCSI�}�V�����A���̃t���^���[�P�[�X��
-�������邱�Ƃɂ��܂����B���t���镔�i�́A
+全部の現状確認が出来たので、廃止してしまったALL-SCSIマシンを、このフルタワーケースで
+復活することにしました。取り付ける部品は、
 <br>
-1.�d���G220W�A���̂܂܁B<br>
-2.3.5�C���`FDD�GEPSON�A���̂܂܁B<br>
-3.5�C���`FDD�GEPSON�A���̂܂܁B<br>
-4.CDROM�GSCSI�@NAKAMITIMJ-5.16�A5�A��<br>
-5.�}�U�[�{�[�h�GDCS�@S7AX�@Sockt7-AT<br>
-6.RAM�GSDRAM�A128MB<br>
-7.CPU�GK6-2+533MHz�@100MHzx5.5�@<br>
-8.VGA�G3DexPlorer3000/ASUS<br>
+1.電源；220W、そのまま。<br>
+2.3.5インチFDD；EPSON、そのまま。<br>
+3.5インチFDD；EPSON、そのまま。<br>
+4.CDROM；SCSI　NAKAMITIMJ-5.16、5連装<br>
+5.マザーボード；DCS　S7AX　Sockt7-AT<br>
+6.RAM；SDRAM、128MB<br>
+7.CPU；K6-2+533MHz　100MHzx5.5　<br>
+8.VGA；3DexPlorer3000/ASUS<br>
 9.HDD-1;DDRS-39130 9GB-WIDE<br>
 10.HDD-2;ST32171W 2GB-SCA<br>
-11.SCSI-HOST-ADAPTER;IO DATA SCU-PCI *�ݒ�<br>
+11.SCSI-HOST-ADAPTER;IO DATA SCU-PCI *設定<br>
 12.NetWorkCard;Intel8255x 10/100BASE-T<br>
 13.SoundCard;Criative Audio PCI<br>
 <br>
-WIDE-SCSI�炵�����\�𔭊������悤�Ƃ��āA���낢��Ȃ��Ƃ����Ă݂܂����B���X�́A
-ADPTEC2940��FujitsuMAB3091S�̑g�ݍ��킹�ŁAWindows98���g�p���Ă����̂ł����A
-Write�̑��x�����ɒႭ�A�z�X�g�A�_�v�^��2940U�Ɍ������A20MHz�̓����]���ɂ��Ă�
-�قƂ�ǉ��P�ł��܂���ł����BHD�h���C�u�̐��\�����E�Ǝv���AQuantum��VikingII
-�Ɍ������Ă݂܂������A�V�X�e���̃R�s�[�r���ŃG���[�����������f�B���ɁAIBM-DDRS
--39130��IO�@DATA��SCU�̑g�ݍ��킹�ŁAWindowd2000���N���[���C���X�g�[���B���̂Ƃ���
-�x���`�}�[�N���ȉ��Ɏ����܂��B<br>
+WIDE-SCSIらしい性能を発揮させようとして、いろいろなことをしてみました。元々は、
+ADPTEC2940とFujitsuMAB3091Sの組み合わせで、Windows98を使用していたのですが、
+Writeの速度が非常に低く、ホストアダプタを2940Uに交換し、20MHzの同期転送にしても
+ほとんど改善できませんでした。HDドライブの性能が限界と思い、QuantumのVikingII
+に交換してみましたが、システムのコピー途中でエラーが発生し中断。次に、IBM-DDRS
+-39130とIO　DATAのSCUの組み合わせで、Windowd2000をクリーンインストール。このときの
+ベンチマークを以下に示します。<br>
 <br>
- �� �� ��  HDBENCH Ver 2.610  �� �� �� <br>
-�g�p�@��   s7ax HDD ��������<br>
+ ★ ★ ★  HDBENCH Ver 2.610  ★ ★ ★ <br>
+使用機種   s7ax HDD 交換直後<br>
 Processor  AMD K6 551.5MHz [AuthenticAMD family 5 model D step 4] <br>
-�𑜓x     1024x768 65536�F(16Bit) <br> 
+解像度     1024x768 65536色(16Bit) <br> 
 Display    NV3<br>
 Memory     130,612Kbyte<br>
 OS         Windows NT 5.0 (Build: 2195) <br> 
 Date       2002/11/26  15: 7<br>
 <br>
-�v���C�}�� IDE �`���l��<br>
+プライマリ IDE チャネル<br>
 <br>
-�v���C�}�� IDE �`���l��<br>
+プライマリ IDE チャネル<br>
 <br>
 Adaptec AHA-1510 SCSI Host Adapter<br>
 <br>
@@ -75,29 +75,29 @@ Symbios Logic 875XS|D, 2280X PCI SCSI Adapter<br>
   NAKAMICHMJ-5.16S        1.07<br>
   NAKAMICHMJ-5.16S        1.07<br>
 <br>
-  ALL   ��    ��    ��    �~   Text Scroll DD  Read Write Memory Drive<br>
+  ALL   浮    整    矩    円   Text Scroll DD  Read Write Memory Drive<br>
 23151 38221 49355 39396  7540 28838   328  29 10767 10767 35082  E:10MB<br>
 <br>
-Read�AWrite�Ƃ�10MB���z���邱�Ƃ��o���܂����BJUNK���i�̊񂹏W�߂Ƃ��ẮA
-�܂��܂��̏o�����Ǝv���܂��B���������悭���邱�Ƃ͏o���邩�ƁAIO�@DATA�̃z�[��
-�y�[�W����h���C�o���_�E�����[�h���A�C���X�g�[�������Ƃ��̃f�[�^�����Ɏ����܂��B
+Read、Writeとも10MBを越えることが出来ました。JUNK部品の寄せ集めとしては、
+まずまずの出来だと思います。もう少しよくすることは出来るかと、IO　DATAのホーム
+ページからドライバをダウンロードし、インストールしたときのデータを次に示します。
 <br>
 <br>
- �� �� ��  HDBENCH Ver 2.610  �� �� ��<br> 
-�g�p�@��   IO DATA SCU-PCI Driver UpDate<br>
+ ★ ★ ★  HDBENCH Ver 2.610  ★ ★ ★<br> 
+使用機種   IO DATA SCU-PCI Driver UpDate<br>
 <br>
-  ALL   ��    ��    ��    �~   Text Scroll DD  Read Write Memory Drive<br>
+  ALL   浮    整    矩    円   Text Scroll DD  Read Write Memory Drive<br>
 23651 38170 49355 41311  8569 29115   329  29 10332 12032 34833  E:10MB<br>
-�@I-O DATA SC-UPCI�V���[�Y<br>
+　I-O DATA SC-UPCIシリーズ<br>
    IBM     DDRS-39130D     DC1B<br>
 <br>
-Symbios Logic 875XS|D, 2280X PCI SCSI Adapter�@�ƂȂ��Ă����Ƃ��낪I-O DATA 
-SC-UPCI�V���[�Y�ƃ`�b�v���[�J���ł͂Ȃ��A�A�_�v�^�̃��[�J���ɕς���Ă���A
-Write�̐��\���A�����ǂ��Ȃ��Ă��܂��BMylex��RAID�J�[�h�ȂǕς�JUNK���L��̂ł���
-�A�����SCSI������́A�����܂łƂ��Ă����܂��B
-�����炵��JUNK(�ςȕ\���ł���)���w������ƁA�����Ȃɂ��׋�����������̂ł��B
-(2002/11/28�L)
+Symbios Logic 875XS|D, 2280X PCI SCSI Adapter　となっていたところがI-O DATA 
+SC-UPCIシリーズとチップメーカ名ではなく、アダプタのメーカ名に変わっており、
+Writeの性能が、少し良くなっています。MylexのRAIDカードなど変なJUNKも有るのですが
+、今回のSCSIいじりは、ここまでとしておきます。
+あたらしいJUNK(変な表現ですね)を購入すると、いつもなにか勉強させられるものです。
+(2002/11/28記)
 <p></p>
-<a href="infodos.html">�Â�AT�݊��@�֌W�̃y�[�W�ɖ߂� 
+<a href="infodos.html">古いAT互換機関係のページに戻る 
 </A>
-<P>�@</P></BODY></HTML>
+<P>　</P></BODY></HTML>
