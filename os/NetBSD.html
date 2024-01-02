@@ -2,45 +2,45 @@
 <html>
 <head>
   <title>NetBSD</title>
-   
+   <meta charset="UTF-8">
 </head>
   <body bgcolor="#ffffff">
        <a name="top"> </a>        
-<h1>NetBSD�ɂ���</h1>
-          CPU��68030��68040���g�����A�Â�MAC�̏�œ��삷��UNIX�n��OS�Ƃ��āANetBSD������܂��BNetBSD�̓t���[�ň��S�A�������ڐA���������UNIX���̃I�y���[�e�B���O�V�X�e���ŁA64�r�b�g�A���t�@�[�T�[�o�[��f�X�N�g�b�v�V�X�e������g�ђ[����g�ݍ��݃f�o�C�X�܂ŁA�����̋@��ŗ��p�\�ł��BPowerPC601�Ȃ�΁AMKLinux�APowerPC604�Ȃ�΁AVineLinux�Ȃ�Linux�n�̑I����������܂��B
-    �@�W�U�n��Linux�ȂǂƈႢ�A�C���X�g�[����4�`5���Ԃƒ����Ԃ�����܂��BApache���C���X�g�[������΁A������p��WEB�T�[�o���o���オ��AWEB�y�[�W�̃e�X�g�ȂǂɁA�d�󂷂�̂ł͂Ȃ����Ǝv���܂��B
-    �@�ŐV�o�[�W������1.5.2��MacII�AIIx�AIICx�ASE/30�AIICi�AIIsi�AIIVx�AIIVi�ALC/Peforma520�A575�A475�A588�A630�ALCII�AIII�AClassicII�AColorClassi�ACentris650�A610�A660AV�AQuadra700�A610�A650�A800�A660AV�A840AV�œ��삷��悤�ł��B
-    �ڂ����́Ghttp://www.netbsd.org/ja/        
+<h1>NetBSDについて</h1>
+          CPUに68030や68040を使った、古いMACの上で動作するUNIX系のOSとして、NetBSDがあります。NetBSDはフリーで安全、かつ高い移植性を備えたUNIX風のオペレーティングシステムで、64ビットアルファーサーバーやデスクトップシステムから携帯端末や組み込みデバイスまで、多くの機種で利用可能です。PowerPC601ならば、MKLinux、PowerPC604ならば、VineLinuxなどLinux系の選択肢もあります。
+    　８６系のLinuxなどと違い、インストールに4～5時間と長時間かかります。Apacheをインストールすれば、自分専用のWEBサーバが出来上がり、WEBページのテストなどに、重宝するのではないかと思います。
+    　最新バージョンは1.5.2でMacII、IIx、IICx、SE/30、IICi、IIsi、IIVx、IIVi、LC/Peforma520、575、475、588、630、LCII、III、ClassicII、ColorClassi、Centris650、610、660AV、Quadra700、610、650、800、660AV、840AVで動作するようです。
+    詳しくは；http://www.netbsd.org/ja/        
 <hr>        
-<h4>IICi��NetBSD/�������U�W��1.3.1���C���X�g�[��</h4>
-        IICi�Ɏ����I�ɃC���X�g�[�����Ă݂܂����B������20MB�AHD500MB�AAPPLE-NuBus-EtherNet�J�[�h�A MAC-OS7.1�ŁAMAC������C���X�g�[��1.1g�Ńo�C�i����sets���ׂĂ��C���X�g�[���B��T���Ԃ��炢
-    ������܂����B�N���͑S�����Ȃ��A��ʂ�̊�{�I�Ȑݒ�ƁADNS�̐ݒ���s���Ă���܂��B�i1998/8�j <br>
+<h4>IICiにNetBSD/ｍａｃ６８ｋ1.3.1をインストール</h4>
+        IICiに試験的にインストールしてみました。メモリ20MB、HD500MB、APPLE-NuBus-EtherNetカード、 MAC-OS7.1で、MAC側からインストーラ1.1gでバイナリのsetsすべてをインストール。約５時間くらい
+    かかりました。起動は全く問題なく、一通りの基本的な設定と、DNSの設定を行ってあります。（1998/8） <br>
                
 <hr>        
-<h4>Quadra650��NetBSD/�������U�W��1.3.3���C���X�g�[��</h4>
-        Quadra650��X-WIndows�𗧂��グ�Ă݂܂����B������40MB�AHD1GB�A�N���b�N��40MHz�ɃA�b�v�B ����Ethernet�Ɠ����r�f�I���g����̂Ŋy�ł��B�J���[��Window���\�ł����B�i1999/8�j
+<h4>Quadra650にNetBSD/ｍａｃ６８ｋ1.3.3をインストール</h4>
+        Quadra650でX-WIndowsを立ち上げてみました。メモリ40MB、HD1GB、クロックを40MHzにアップ。 内蔵Ethernetと内蔵ビデオが使えるので楽です。カラーのWindowも可能でした。（1999/8）
     <br>
                
 <hr>        
-<h4>Centris650��NetBSD/�������U�W��1.5.2���C���X�g�[��</h4>
-        IICX��Centris650����ꂽMAC�������p��FTP�T�[�o�ɂ��܂����B������36MB�AHD520MB�ACPU68LC04033B�BCentris650�ł́ALC��040�ł������܂��B�C���X�g�[����1.1g�ł͂��܂������Ȃ��̂ŁA1.1h���g���܂��B1.3�ł̓f�t�H���g��FTP�����삵�Ă����̂ł����A1.5�ł́Ainetd�̋L�q��ύX�i#���O���j���Ȃ��ƁAFTP���N�����܂���B���́A������́A��������ނ̈Ⴄ�p�\�R�����A�C����K�v�̉����Ďg�������Ă��܂��̂ŁA�ǂ��ɉ������邩������Ȃ��Ȃ�܂��B�l�b�g���[�N��ʂ��āA�T�[�o�ɑ����Ă����΁A�ǂ̃p�\�R������ł��Q�Ƃł���̂ŁA�֗����Ǝv���܂��B�T�[�o�̃o�b�N�A�b�v�͂ǂ����܂��傤���ˁH�i2002/3�j
+<h4>Centris650にNetBSD/ｍａｃ６８ｋ1.5.2をインストール</h4>
+        IICXにCentris650を入れたMACを自分用のFTPサーバにしました。メモリ36MB、HD520MB、CPU68LC04033B。Centris650では、LCの040でも動きます。インストーラは1.1gではうまくいかないので、1.1hを使います。1.3ではデフォルトでFTPが動作していたのですが、1.5では、inetdの記述を変更（#を外す）しないと、FTPが起動しません。私は、何台もの、しかも種類の違うパソコンを、気分や必要の応じて使い分けていますので、どこに何があるか分からなくなります。ネットワークを通じて、サーバに送っておけば、どのパソコンからでも参照できるので、便利かと思います。サーバのバックアップはどうしましょうかね？（2002/3）
           
 <hr>        
-<h4>���̑�</h4>
-        ��L�̂R�@��ȊO�ɁALC3�A2Si�ɃC���X�g�[���������̂́A����ɓ��삵�܂����BCentris660AV��1.5.2���C���X�g�[�������ꍇ�ɂ́A�N���̓r���ŁAcpu�֌W�̃G���[�Ŏ~�܂��Ă��܂��܂��B
+<h4>その他</h4>
+        上記の３機種以外に、LC3、2Siにインストールしたものは、正常に動作しました。Centris660AVに1.5.2をインストールした場合には、起動の途中で、cpu関係のエラーで止まってしまいます。
     <br>
-        �Ō�ɂȂ�܂����A���̂悤�Ȃ��΂炵���\�t�g���J�����A�����Ŕz�z���Ă�������A�����̕��X�ɁA���ӂ̈ӂ�\�������Ǝv���܂��B(2002.4.11�L)
+        最後になりますが、このようなすばらしいソフトを開発し、無料で配布してくださる、多くの方々に、感謝の意を表したいと思います。(2002.4.11記)
           
 <hr>        
-<h4>�Q�l��</h4>
-        1.MacBSD�l�b�g���[�N�T�[�o�\�z�K�C�h�A�O�Y�ꑥ���Akoubunsha�A1998<br>
-        2.MacBSDXWindowSystem&amp;���{������p�K�C�h�A�O�Y�ꑥ���Akoubunsha�A1998<br>
-        3.NetBSDmac68K�O�����A�_�R���Y���ASKOEISHA�A1998<br>
-        4.NetBSDmac68K�O�ꊈ�p�A�_�R���Y�A�����N�T�A����T�V���ASKOEISHA�A1999        
+<h4>参考書</h4>
+        1.MacBSDネットワークサーバ構築ガイド、三浦一則著、koubunsha、1998<br>
+        2.MacBSDXWindowSystem&amp;日本語環境活用ガイド、三浦一則著、koubunsha、1998<br>
+        3.NetBSDmac68K徹底入門、神山文雄著、SKOEISHA、1998<br>
+        4.NetBSDmac68K徹底活用、神山文雄、遠藤康裕、柳井裕之著、SKOEISHA、1999        
 <hr> <a href="#top">back to top </a> <br>
-          <a href="../mac68k/info68k.html">68K�}�b�L���g�b�V���̃y�[�W�֖߂�</a><br>
+          <a href="../mac68k/info68k.html">68Kマッキントッシュのページへ戻る</a><br>
         <a href="../index.html">back to home page        </a>  
-<p>�@</p>
+<p>　</p>
        <br>
         <br>
       <br>
