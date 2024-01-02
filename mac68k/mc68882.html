@@ -2,22 +2,22 @@
 <html>
 <head>
   <title>LCIII</title>
-   
+  <meta charset="UTF-8">
 </head>
 <body bgcolor="#ffffff">
    
-<h1>FPU-MC68882�̃W�����N�{�[�h����̎��O����LCIII�ւ̎��t��</h1>
+<h1>FPU-MC68882のジャンクボードからの取り外しとLCIIIへの取り付け</h1>
   <img src="lc3.jpg" align="left">
-  ����LCIII�́A�H�t���łP���S��~�قǂœ��肵�܂����BIICi���͓��삪 �y���ŁA���[�v�����x�Ŏg���Ȃ�A���Ȃ薞���ł�����̂ł����B�ʐ^��
- �E���ACPU�ׂ̗�FPU�����t����\�P�b�g������܂��BFPU���Ȃ��Ă� ���ɍ���Ȃ��̂ł����A�x���`�}�[�N���Ƃ�ƁAFPU�G�~�����[�V������
-�������ƂŁA�������l���Ⴍ�łĂ��܂��B�����ŁA���Ƃ�FPU��t����  ��肽���Ǝv���A�p�[�c�V���b�v�ŒT���Ă݂��̂ł����AMC68882�́A ����ɂ͂����Ă��A�����P���MAC�������Ă��܂��قǂ̒l�i�ł��B�`���
-QFP�p�b�P�[�W�ŁA�����\�P�b�g�ɓ���悤�ɋȂ��āA�ؒf���������Ɍ���  �܂��B����Ȃ�ʂȕ��@�Ƃ��āA�W�����N�ȃ{�[�h����MC68882���O��
-���X���Ő��`����Ή��Ƃ��Ȃ肻���Ȋ����ł��B�����ł��A ����Ȃ�IISi��NuBus�A�_�v�^�ɂɂ́AMC68882���t���Ă��܂��B  IISi��20MHz�ł����ALCIII��25MHz�ł��������낤�ƐM���Ă�������邱��
-�ɂ��܂����B����܂��Ă��܂�Ȃ��悤�C��t���āA�{�[�h����؂���A  �\�P�b�g�ɍ����悤�Ƀ��X���ő��̗]���ȋ����������A�ׂ̑��ƐڐG�� �Ȃ��悤�h���C�o�̐�ȂǂŁA���̊��o�𒲐������肵�āAFPU�̊����ł��B
-��́A���t�������ɋC��t���āA�\�P�b�g�ɉ������݂܂��B  LCIII�͌����ɋN�����܂����B�m�[�g����systeminfo�Ō���ƁAFPU�@MC68882
-�ƕ\������Ă��܂��B�������x���`�}�[�N��������҂�オ��܂����B  �p�\�R�����A����ȃ��t�Ȉ����ł������Ă����̂͂��ꂵ���ł��ˁB �@   
-<hr>�@    <a href="info68k.html">68K�}�b�L���g�b�V���̃y�[�W�ɖ߂�  </a>  
-<p>�@</p>
+  このLCIIIは、秋葉原で１万４千円ほどで入手しました。IICiよりは動作が 軽快で、ワープロ程度で使うなら、かなり満足できるものでした。写真の
+ 右下、CPUの隣にFPUを取り付けるソケットがあります。FPUがなくても 特に困らないのですが、ベンチマークをとると、FPUエミュレーションと
+いうことで、総合数値が低くでてきます。そこで、何とかFPUを付けて  やりたいと思い、パーツショップで探してみたのですが、MC68882は、 あるにはあっても、もう１台のMACが買えてしまうほどの値段です。形状は
+QFPパッケージで、足をソケットに入るように曲げて、切断しただけに見え  ます。これなら別な方法として、ジャンクなボードからMC68882を外し
+ヤスリで整形すれば何とかなりそうな感じです。そうです、 いらないIISiのNuBusアダプタにには、MC68882が付いています。  IISiは20MHzですが、LCIIIの25MHzでも動くだろうと信じてやった見ること
+にしました。足を折ってしまわないよう気を付けて、ボードから切り取り、  ソケットに合うようにヤスリで足の余分な金属を削り取り、隣の足と接触し ないようドライバの先などで、足の感覚を調整したりして、FPUの完成です。
+後は、取り付け方向に気を付けて、ソケットに押し込みます。  LCIIIは見事に起動しました。ノートンのsysteminfoで見ると、FPU　MC68882
+と表示されています。もちろんベンチマークもちょっぴり上がりました。  パソコンが、こんなラフな扱いでも動いてくれるのはうれしいですね。 　   
+<hr>　    <a href="info68k.html">68Kマッキントッシュのページに戻る  </a>  
+<p>　</p>
  <br>
  
 </body>
